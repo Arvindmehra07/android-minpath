@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MinimumPath</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="help_dialog_msg">1. Tap to toggle between an empty and filled cell. \n2. Tap and hold cell to toggle modes. \n3. Tap reset to reset the board."</string>
+    <string name="no_path_found_msg">No path found!</string>
+    <string name="find_path">Find path</string>
+    <string name="dijkstraAlgo_title">Dijkstra\'s algo</string>
+    <string name="value_zero">0</string>
+</resources>

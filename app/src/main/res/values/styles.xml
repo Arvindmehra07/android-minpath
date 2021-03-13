@@ -1,0 +1,22 @@
+<resources>
+
+    <style name="Widget.Theme.MinimumPath.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.MinimumPath.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="dialogStyle" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">@color/timid_blue</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="buttonBarNegativeButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+    <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/timid_white</item>
+        <item name="android:textSize">14dp</item>
+
+    </style>
+</resources>
