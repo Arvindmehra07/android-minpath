@@ -20,6 +20,10 @@ class GridService {
     private var start = 0
     private var end = 0
 
+    /**
+     * Utility function to get snapshot of 2d grid with it's obstacles
+     */
+
     private fun getObstacleMatrix(grid: List<GridCell>): ArrayList<ArrayList<String>>{
         val matrix = ArrayList<ArrayList<String>>()
         var str = ""
@@ -37,6 +41,11 @@ class GridService {
         }
         return matrix
     }
+
+    /**
+     * Utility function to get Adjacency matrix from Obstacle matrix, since only 4 directions of movement
+     * considered, up and left movements are assigned higher costs.
+     */
 
     private fun getAdjacencyMatrix(grid: List<GridCell>): ArrayList<ArrayList<String>>{
         val matrix = getObstacleMatrix(grid)
@@ -77,11 +86,19 @@ class GridService {
         return adjacencyMatrix
     }
 
+    /**
+     * Utility function to check if a grid lies within the boundaries
+     */
+
     private fun isValid(x: Int, y: Int, xLim: Int, yLim: Int):Boolean{
         if (x>=xLim|| x<0 || y>=yLim || y<0) return false
         return true
     }
 
+
+    /**
+     * Utility function to get a cell with minimum distance among non visited cells
+     */
     private fun getMinDist(len: Int, dist: Array<Int>, visited: Array<Int>):Int{
         var min = Int.MAX_VALUE
         var minIdx = -1
@@ -94,6 +111,12 @@ class GridService {
         }
         return minIdx
     }
+
+    /**
+     * Dijkstra's algorithm -> calculates the shortest distance from source cell to
+     * finish cell. Returns an array of size total number of cells in the grid, each index denotes the cell itself,
+     * and values it holds denotes the path algorithm chose to reach here.
+     */
     private fun dijkstraUtil(grid : List<GridCell>): Array<Int>{
         val adjacencyMatrix = getAdjacencyMatrix(grid)
         val len = adjacencyMatrix.size
@@ -118,6 +141,10 @@ class GridService {
         }
         return fromArray
     }
+
+    /**
+     * Utility function to generate a grid with shortest path using fromArray
+     */
     fun fillPath(grid : List<GridCell>): List<GridCell>?{
         val fromArray = dijkstraUtil(grid)
         if (fromArray[end] == -1){
@@ -133,6 +160,9 @@ class GridService {
         return grid
     }
 
+    /**
+     * Resets the grid to no obstacles
+     */
     fun resetBoard(grid : List<GridCell>) : List<GridCell> {
         for (i in grid) {
             i.value = "0"

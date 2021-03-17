@@ -13,7 +13,7 @@
 
 ## Description
 
-The app uses the MVVM model of code structring. Components and their are as follows:
+The app uses the MVVM model of code structuring. Components and their are as follows:
 - Model - Contains model of the cell in grid.
 - MinPathViewModel - Contains and manipulates the LiveData objects.
 - GridService - Contains the business logic to find the min path.
