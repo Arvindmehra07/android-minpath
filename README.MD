@@ -34,6 +34,7 @@ Clone and build the source code on android studio or download the apk.
 Once installed:
 - Click on any cell to create a path blocker
 ![ss1](https://github.com/Arvindmehra07/android-minpath/blob/master/screenshots/ss_obstacle_only.png?raw=true)
+
 - Click on 'Find Path' to see the shortest path (if possible).
 ![ss2](https://github.com/Arvindmehra07/android-minpath/blob/master/screenshots/ss_fiiled_path.png?raw=true)
 - Click replay(at top right) to reset the board.
@@ -44,6 +45,6 @@ Once installed:
 ## Author Info
 
 - Twitter - [@_Arvind_Mehra](https://twitter.com/_Arvind_Mehra)
-- Website - [Arvind Mehra](https://www.linkedin.com/in/arvind-mehra-9b2280141/)
+- Linkdin - [Arvind Mehra](https://www.linkedin.com/in/arvind-mehra-9b2280141/)
 
 [Back To The Top](#read-me-template)
